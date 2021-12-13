@@ -7,6 +7,7 @@ Tested on Windows 11.
 ## How to compile
 
 > I'm assuming you have Node.js already installed. I suggest to use the latest LTS version available.
+> Also, I'm assuming you are already in the working folder before any init/compile action.
 > {.is-warning}
 
 1. Download/Clone this

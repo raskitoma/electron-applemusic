@@ -12,8 +12,7 @@ const createWindow = () => {
     hasShadow: true,
     icon: __dirname + '/assets/icons/png/64x64.png',
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true
+      preload: path.join(__dirname, 'preload.js')
     }
   })
 
@@ -21,12 +20,10 @@ const createWindow = () => {
   mainWindow.loadURL('https://music.apple.com')
 
   // remove window's mneu bar
-    mainWindow.setMenu(null)
-// set frameless window
-    mainWindow.setMenuBarVisibility(false)
-
+  mainWindow.setMenu(null)
+  
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  mainWindow.webContents.openDevTools()
 }
 
 // This method will be called when Electron has finished
@@ -38,7 +35,7 @@ app.whenReady().then(() => {
   app.on('activate', () => {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    if (BrowserWindow.getAllWindows().length === 0) createWindow()   
   })
 })
 
